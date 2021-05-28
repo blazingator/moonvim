@@ -1,10 +1,12 @@
 import cmd from vim
 import nvim_set_keymap from vim.api
 
+-- Salva o buffer atual
 nvim_set_keymap 'n', '<c-s>', ':w<CR>', {noremap: true, silent: false}
+-- Fecha o buffer atual
+nvim_set_keymap 'n', 'q',':q<CR>', {noremap: true, silent: true}
 
-nvim_set_keymap 'n', 'q',':q<CR>', {noremap: true,silent: false}
-
+-- Navegação de janela de Terminal
 cmd [[
   tnoremap <C-h> <C-\><C-N><C-w>h
   tnoremap <C-j> <C-\><C-N><C-w>j

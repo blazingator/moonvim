@@ -22,37 +22,60 @@ require_plugin = (plugin) ->
   if ok
     cmd 'packadd ' .. plugin
 
-  ok, err, code
+  return ok, err, code
 
 cmd 'autocmd BufWritePost plugins.moon PackerCompile' -- Autocompilação se houver mudanças no arquivo plugins.moon
 cmd 'autocmd FileType moon packadd moonscript-vim'
 
 packer = require 'packer'
+use = packer.use
+packer.startup ->
+  use 'wbthomason/packer.nvim'
 
-return packer.startup(
-  (use) ->
-    use 'wbthomason/packer.nvim'
+  use {'neovim/nvim-lspconfig', opt: true}
+  use {'kabouzeid/nvim-lspinstall', opt: true}
 
-    use {'neovim/nvim-lspconfig', opt: true}
-    use {'kabouzeid/nvim-lspinstall', opt: true}
+  use {'nvim-lua/plenary.nvim', opt: true}
+  use {'nvim-lua/popup.nvim', opt: true}
 
-    -- Treesitter
-    use {'nvim-treesitter/nvim-treesitter', run: ':TSUpdate'}
+  -- Treesitter
+  use {'nvim-treesitter/nvim-treesitter', run: ':TSUpdate'}
 
-    -- Explorador de arquivos
-    use 'kyazdani42/nvim-tree.lua'
+  -- Explorador de arquivos
+  use 'kyazdani42/nvim-tree.lua'
 
-    use {'lewis6991/gitsigns.nvim', opt: true}
+  use {'windwp/nvim-autopairs', opt: true}
+  use {'terrortylor/nvim-comment', opt: true}
 
-    -- sintaxe
-    use {'leafo/moonscript-vim', opt: true}
+  use {'lewis6991/gitsigns.nvim', opt: true}
 
-    -- Colorscheme
-    use {'shaunsingh/nord.nvim', opt: true}
+  -- Keymappings
+  use {'folke/which-key.nvim', opt: true}
 
-    require_plugin 'nvim-lspconfig'
-    require_plugin 'nvim-lspinstall'
-    require_plugin 'nvim-treesitter'
-    require_plugin 'nvim-tree.lua'
-    require_plugin 'nord.nvim'
-)
+  -- sintaxe
+  use {'leafo/moonscript-vim', ft: 'moon'}
+
+  -- Colorscheme
+  use {'shaunsingh/nord.nvim', opt: true}
+
+  -- devicons
+  use {'kyazdani42/nvim-web-devicons', opt: true}
+
+  -- Statusline e abas
+  use {'glepnir/galaxyline.nvim', opt: true}
+  use {'romgrk/barbar.nvim', opt: true}
+
+  require_plugin 'nvim-lspconfig'
+  require_plugin 'nvim-lspinstall'
+  require_plugin 'popup.nvim'
+  require_plugin 'plenary.nvim'
+  --require_plugin 'nvim-treesitter'
+  require_plugin 'nvim-tree.lua'
+  require_plugin 'nvim-autopairs'
+  require_plugin 'nvim-comment'
+  require_plugin 'gitsigns.nvim'
+  require_plugin 'which-key'
+  require_plugin 'nord.nvim'
+  require_plugin 'nvim-web-devicons'
+  require_plugin 'galaxyline.nvim'
+  --require_plugin 'barbar.nvim'

@@ -2,10 +2,16 @@ import cmd, g from vim
 
 cmd 'autocmd BufNewFile,BufRead *.moon set ft=moon'
 
--- Example config in lua
+-- Nord config
 g.nord_contrast = true
 g.nord_borders = false
-g.nord_disable_background = true
+--g.nord_disable_background = false
+
+-- NvimTree
+g.nvim_tree_follow = 1
+g.nvim_tree_icons =
+  symlink: '',
+  git: {unstaged: "", staged: "✓", unmerged: "", renamed: "➜", untracked: ""},
 
 -- Load the colorscheme
 import set from require 'nord'
@@ -24,3 +30,6 @@ with vim
     .splitright = true
   with .wo
     .number = true
+  .cmd 'set ts=2'
+  .cmd 'set sw=2'
+  .cmd 'set expandtab'
