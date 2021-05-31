@@ -1,6 +1,7 @@
 import cmd, g from vim
 
 cmd 'autocmd BufNewFile,BufRead *.moon set ft=moon'
+cmd 'autocmd VimEnter * packadd barbar.nvim'
 
 -- Nord config
 g.nord_contrast = true
