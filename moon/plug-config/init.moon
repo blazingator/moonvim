@@ -1,5 +1,6 @@
 require 'plug-config.galaxyline'
 require 'plug-config.gitsigns'
 require 'plug-config.which-key'
+require 'plug-config.compe'
 require 'plug-config.comment'
 require 'plug-config.autopairs'

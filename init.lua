@@ -1,2 +1,1 @@
-require('moonscript')
 require('main')
