@@ -35,6 +35,7 @@ packer.startup ->
   -- LSP plugins
   use {'neovim/nvim-lspconfig', opt: true}
   use {'kabouzeid/nvim-lspinstall', opt: true}
+  use {'folke/trouble.nvim', opt: true}
 
   -- Autocomplete
   use {'hrsh7th/nvim-compe', opt: true}
@@ -62,6 +63,9 @@ packer.startup ->
 
   -- sintaxe
   use {'leafo/moonscript-vim', ft: 'moon'}
+  
+  -- Colorizer.lua
+  use {'norcalli/nvim-colorizer.lua', opt: true}
 
   -- Colorscheme
   --use {'shaunsingh/nord.nvim', opt: true}
@@ -76,6 +80,7 @@ packer.startup ->
 
   require_plugin 'nvim-lspconfig'
   require_plugin 'nvim-lspinstall'
+  require_plugin 'trouble.nvim'
   require_plugin 'friendly-snippets'
   require_plugin 'popup.nvim'
   require_plugin 'plenary.nvim'
@@ -90,6 +95,7 @@ packer.startup ->
   require_plugin 'gitsigns.nvim'
   require_plugin 'which-key.nvim'
   require_plugin 'tokyonight.nvim'
+  require_plugin 'nvim-colorizer.lua'
   require_plugin 'nvim-web-devicons'
   require_plugin 'galaxyline.nvim'
   --require_plugin 'barbar.nvim'
