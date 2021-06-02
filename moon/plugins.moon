@@ -64,7 +64,8 @@ packer.startup ->
   use {'leafo/moonscript-vim', ft: 'moon'}
 
   -- Colorscheme
-  use {'shaunsingh/nord.nvim', opt: true}
+  --use {'shaunsingh/nord.nvim', opt: true}
+  use {'folke/tokyonight.nvim', opt: true}
 
   -- devicons
   use {'kyazdani42/nvim-web-devicons', opt: true}
@@ -88,7 +89,7 @@ packer.startup ->
   require_plugin 'nvim-comment'
   require_plugin 'gitsigns.nvim'
   require_plugin 'which-key.nvim'
-  require_plugin 'nord.nvim'
+  require_plugin 'tokyonight.nvim'
   require_plugin 'nvim-web-devicons'
   require_plugin 'galaxyline.nvim'
   --require_plugin 'barbar.nvim'
