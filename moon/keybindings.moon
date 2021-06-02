@@ -1,6 +1,11 @@
 import cmd from vim
 import nvim_set_keymap from vim.api
 
+-- atalhos para o barbar(bufferline)
+nvim_set_keymap 'n', '<TAB>', ':BufferNext<CR>', {noremap: true, silent: true}
+nvim_set_keymap 'n', '<S-TAB>', ':BufferPrevious<CR>', {noremap: true, silent: true}
+nvim_set_keymap 'n', '<S-x>', ':BufferClose<CR>', {noremap: true, silent: true}
+
 -- Salva o buffer atual
 nvim_set_keymap 'n', '<c-s>', ':w<CR>', {noremap: true, silent: false}
 -- Fecha o buffer atual
@@ -19,6 +24,7 @@ cmd [[
   tnoremap <Esc> <C-\><C-n>
 ]]
 
+-- Redimensionar janela
 cmd [[
   nnoremap <silent> <C-Up>    :resize -2<CR>
   nnoremap <silent> <C-Down>  :resize +2<CR>
