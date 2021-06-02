@@ -1,9 +1,9 @@
+require 'globals'
+
 require 'plugins'
 require 'config'
 require 'keybindings'
 require 'plug-config'
-
-require 'globals'
 
 require 'lsp'
 require 'lsp/jsts'

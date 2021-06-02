@@ -46,6 +46,8 @@ packer.startup ->
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run: ':TSUpdate'}
+  use {'windwp/nvim-ts-autotag', opt: true}
+  use {'andymass/vim-matchup', opt: true}
 
   -- Explorador de arquivos
   use 'kyazdani42/nvim-tree.lua'
@@ -73,12 +75,14 @@ packer.startup ->
 
   require_plugin 'nvim-lspconfig'
   require_plugin 'nvim-lspinstall'
+  require_plugin 'friendly-snippets'
   require_plugin 'popup.nvim'
   require_plugin 'plenary.nvim'
   require_plugin 'nvim-compe'
   require_plugin 'vim-vsnip'
-  require_plugin 'friendly-snippets'
   require_plugin 'nvim-treesitter'
+  require_plugin 'nvim-ts-autotag'
+  require_plugin 'vim-matchup'
   require_plugin 'nvim-tree.lua'
   require_plugin 'nvim-autopairs'
   require_plugin 'nvim-comment'
