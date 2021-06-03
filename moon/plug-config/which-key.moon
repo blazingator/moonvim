@@ -75,8 +75,14 @@ nvim_set_keymap 'v', '<leader>/', ':CommentToggle<CR>', {noremap: true, silent: 
 mappings = {
   ["/"]: "Comment"
   ["e"]: "Explorer"
-  --d:
-    --name: "+Diagnostics"
+  d:
+    name: "+Diagnostics"
+    t: {'<cmd>TroubleToggle<cr>','Toggle Trouble.nvim'}
+    w: {'<cmd>TroubleToggle lsp_workspace_diagnostics <cr>','Workspace Diagnostics'}
+    d: {'<cmd>TroubleToggle lsp_document_diagnostics<cr>', 'Document Diagnostics'}
+    q: {'<cmd>TroubleToggle quickfix<cr>', 'quickfix'}
+    l: {'<cmd>TroubleToggle loclist<cr>', 'location list'}
+    r: {'<cmd>TroubleToggle lsp_references<cr>', 'references'}
   g:
     name: "+Git"
     j: {"<cmd>NextHunk<cr>","Next hunk"}
