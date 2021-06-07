@@ -75,6 +75,7 @@ nvim_set_keymap 'v', '<leader>/', ':CommentToggle<CR>', {noremap: true, silent: 
 mappings = {
   ["/"]: "Comment"
   ["e"]: "Explorer"
+  ["<F2>"]: "Build config"
   d:
     name: "+Diagnostics"
     t: {'<cmd>TroubleToggle<cr>','Toggle Trouble.nvim'}
@@ -113,6 +114,10 @@ mappings = {
     -- x: {"<cmd>cclose<cr>", "Close Quickfix"}
     -- -- s: {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"}
     -- S: {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
+  t:
+    name: "+Terminal"
+    n: {"<cmd>lua require('FTerm').open()<cr>", "Open a new Terminal"}
+    t: {"<cmd>lua require('FTerm').toggle()<cr>", "Toggle terminal window"}
 }
 
 wk = require 'which-key'

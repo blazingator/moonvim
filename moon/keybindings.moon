@@ -11,6 +11,9 @@ nvim_set_keymap 'n', '<c-s>', ':w<CR>', {noremap: true, silent: false}
 -- Fecha o buffer atual
 nvim_set_keymap 'n', 'q',':q<CR>', {noremap: true, silent: true}
 
+-- Terminal
+nvim_set_keymap 'n', '<c-t>', '<cmd>lua require("FTerm").open()<CR>', {noremap: true, silent: true}
+
 -- Navegação de janela de Terminal
 cmd [[
   tnoremap <C-h> <C-\><C-N><C-w>h

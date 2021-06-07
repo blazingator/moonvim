@@ -1,6 +1,7 @@
 require 'plug-config.galaxyline'
 require 'plug-config.gitsigns'
 require 'plug-config.which-key'
+require 'plug-config.fterm'
 require 'plug-config.treesitter'
 require 'plug-config.compe'
 require 'plug-config.comment'
