@@ -2,7 +2,9 @@ gl = require 'galaxyline'
 
 colors = {
     -- bg = '#2E2E2E',
-    bg: '#292D38',
+    --bg: '#24283b'
+    bg: '#1a1b26'
+    --bg: '#292D38',
     yellow: '#DCDCAA',
     dark_yellow: '#D7BA7D',
     cyan: '#4EC9B0',

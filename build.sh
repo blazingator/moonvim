@@ -18,8 +18,8 @@ fi
 if [ ! -d $LSP_CONFIG ]; then
   mkdir $LUA_DIR/lsp
 fi
+  
+mv $SRC_DIR/*.lua $LUA_DIR
 
-mv moon/*.lua lua
-
-mv moon/plug-config/*.lua lua/plug-config 
-mv moon/lsp/*.lua lua/lsp
+mv $SRC_DIR/plug-config/*.lua $LUA_DIR/plug-config 
+mv $SRC_DIR/lsp/*.lua $LUA_DIR/lsp
