@@ -6,20 +6,24 @@ LUA_DIR=$PROJ_DIR/lua
 PLUG_CONFIG=$LUA_DIR/plug-config
 LSP_CONFIG=$LUA_DIR/lsp
 
+# Compila os arquivos .moon
 moonc $SRC_DIR
-moonc $SRC_DIR/plug-config
+#moonc $SRC_DIR/plug-config
 
+DIRS=$(ls -l $SRC_DIR | grep drw | awk '{print $9}')
+
+## Verifica se as subpastas existem dentro de LUA_DIR
 if [ ! -d $LUA_DIR ]; then
   mkdir $LUA_DIR;
 fi
-if [ ! -d $LUA_DIR/plug-config ]; then
-  mkdir $LUA_DIR/plug-config;
-fi
-if [ ! -d $LSP_CONFIG ]; then
-  mkdir $LUA_DIR/lsp
-fi
-  
-mv $SRC_DIR/*.lua $LUA_DIR
+for d in $DIRS; do
+  if [ ! -d $LUA_DIR/$d ]; then
+    mkdir $LUA_DIR/$d
+  fi
+done
 
-mv $SRC_DIR/plug-config/*.lua $LUA_DIR/plug-config 
-mv $SRC_DIR/lsp/*.lua $LUA_DIR/lsp
+## Move os arquivos lua para LUA_DIR
+mv $SRC_DIR/*.lua $LUA_DIR
+for d in $DIRS; do
+  mv $SRC_DIR/$d/*.lua $LUA_DIR/$d
+done
