@@ -28,6 +28,7 @@ with vim
     .termguicolors = true -- necessário para o tema de cores
     .splitbelow = true -- split sempre em baixo
     .splitright = true -- vsplit sempre a direita
+    .timeoutlen = 500
   with .wo
     .number = true -- numero das linhas
   -- indentação

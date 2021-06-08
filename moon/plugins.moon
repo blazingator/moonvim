@@ -67,13 +67,15 @@ packer.startup ->
   
   -- Git Signs
   use {'lewis6991/gitsigns.nvim', opt: true}
+  -- Markdown preview
+  use {'iamcco/markdown-preview.nvim', run: 'cd app && npm install', opt: true}
 
   -- Keymappings
   use {'folke/which-key.nvim', opt: true}
 
   -- sintaxe
   use {'leafo/moonscript-vim', ft: 'moon'}
-  
+
   -- Colorizer.lua
   use {'norcalli/nvim-colorizer.lua', opt: true}
 
@@ -107,6 +109,7 @@ packer.startup ->
   require_plugin 'indent-blankline.nvim'
   require_plugin 'nvim-ts-context-commentstring'
   require_plugin 'gitsigns.nvim'
+  require_plugin 'markdown-preview.nvim'
   require_plugin 'which-key.nvim'
   require_plugin 'tokyonight.nvim'
   require_plugin 'nvim-colorizer.lua'

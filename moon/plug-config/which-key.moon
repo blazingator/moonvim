@@ -118,6 +118,10 @@ mappings = {
     name: "+Terminal"
     n: {"<cmd>lua require('FTerm').open()<cr>", "Open a new Terminal"}
     t: {"<cmd>lua require('FTerm').toggle()<cr>", "Toggle terminal window"}
+  m:
+    name: "+MarkdownPreview"
+    t: {"<Plug>MarkdownPreview", "Toggle MarkdownPreview"}
+    s: {"<Plug>MarkdownPreviewStop", "Stop MarkdownPreview"}
 }
 
 wk = require 'which-key'
