@@ -116,8 +116,14 @@ mappings = {
     -- S: {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
   t:
     name: "+Terminal"
-    n: {"<cmd>lua require('FTerm').open()<cr>", "Open a new Terminal"}
-    t: {"<cmd>lua require('FTerm').toggle()<cr>", "Toggle terminal window"}
+    n: {"<cmd>FloatermNew<cr>", "Open a new floating terminal"}
+    t: {"<cmd>FloatermToggle<cr>", "Toggle floating terminal window"}
+    j: {"<cmd>FloatermPrev<cr>", "Previous terminal window"}
+    k: {"<cmd>FloatermNext<cr>", "Next terminal window"}
+    b:
+      name: "+Bottom Terminal"
+      n: {"<cmd>FloatermNew --wintype=split --height=0.25 --name=boterm<cr>", "Open a new terminal on bottom"}
+      t: {"<cmd>FloatermToggle boterm<cr>", "Toggle bottom terminal window"}
   m:
     name: "+MarkdownPreview"
     t: {"<Plug>MarkdownPreview", "Toggle MarkdownPreview"}

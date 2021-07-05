@@ -56,8 +56,8 @@ packer.startup ->
   -- use {'ahmedkhalf/lsp-rooter.nvim', opt: true}
 
   -- Terminal
-  use {'numToStr/FTerm.nvim', opt: true}
-  -- use {'voldikss/vim-floaterm', opt: true}
+  -- use {'numToStr/FTerm.nvim', opt: true}
+  use {'voldikss/vim-floaterm', opt: true}
 
   -- Ferramentas para edição
   use {'windwp/nvim-autopairs', opt: true}
@@ -103,7 +103,7 @@ packer.startup ->
   require_plugin 'vim-matchup'
   require_plugin 'nvim-tree.lua'
   -- require_plugin 'ahmedkhalf/lsp-rooter.nvim'
-  require_plugin 'FTerm.nvim'
+  require_plugin 'vim-floaterm'
   require_plugin 'nvim-autopairs'
   require_plugin 'nvim-comment'
   require_plugin 'indent-blankline.nvim'
