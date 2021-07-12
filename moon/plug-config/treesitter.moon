@@ -1,5 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   ensure_installed: O.treesitter.ensure_installed
+  ignore_install: O.treesitter.ignore_install
   matchup:
     enable: true
   highlight:

@@ -63,7 +63,7 @@ packer.startup ->
   use {'windwp/nvim-autopairs', opt: true}
   use {'terrortylor/nvim-comment', opt: true}
   --use {'Yggdroot/indentLine', opt: true}
-  use {'lukas-reineke/indent-blankline.nvim', opt: true, branch: 'lua'}
+  use {'lukas-reineke/indent-blankline.nvim', opt: true}
   
   -- Git Signs
   use {'lewis6991/gitsigns.nvim', opt: true}
